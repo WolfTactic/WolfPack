@@ -1,0 +1,83 @@
+import random
+import numpy as np
+
+def menu():
+    print("------Menú------")
+    print("1.-Guardar")
+    print("2.-Buscar")
+    print("3.-Imprimir")
+    print("4.-Salir")
+
+
+
+lista=[['Tipo-Vehiculo','Patente', 'Marca del vehiculo', 'Precio', 'Multas', 'Monto Multa','Fecha emicion multa','Fecha registro vehiculo', 'Nombre dueño'],]
+
+
+
+tamaño= len(lista)
+
+def buscar():
+    busqueda= input("Ingrese numero de patente: ")
+    vehiculo = 0;
+    for f in range(5):
+      for c in range(9):
+        vehiculo = vehiculo + 1
+        lista[f,c]= vehiculo;
+
+
+
+while True:
+        menu()
+        opcion=int(input("Digite su opcion: "))
+        if opcion == 1:
+            numero_de_vehiculos = int (input("¿Cuantos Vehiculos desea agregar? "))
+            for i in range(numero_de_vehiculos):
+                print()
+                tipo= input("Ingrese Tipo de Vehiculo: ")
+                print()
+                patente = input("Ingrese Patente vehiculo: ")
+                print()
+                marca = input("Ingrese Marca del vehiculo: ")
+                print()
+                precio = input("Ingrese Precio del vehiculo: ")
+                print()
+                multas = input("Ingrese Cantidad de Multas del vehiculo: ")
+                print()
+                monto = input("Ingrese Monto total de las multas: ")
+                print()
+                emicion = input("Ingrese Fecha emicion multa: ")
+                print()
+                registro = input("Ingrese Fecha de registro del vehiculo: ")
+                print()
+                nombre = input("Ingrese Nombre del dueño del vehiculo: ")
+                print()
+
+                lista.append([tamaño, tamaño, tipo, patente, marca , precio, multas, monto, emicion, registro, nombre])
+                tamaño = tamaño + 1
+
+                def listilla():
+                  lista=[['Tipo-Vehiculo','Patente', 'Marca del vehiculo', 'Precio', 'Multas', 'Monto Multa','Fecha emicion multa','Fecha registro vehiculo', 'Nombre dueño'],]
+
+                  matriz =np.array(lista)
+                  print(matriz)
+
+
+                def certificados(): 
+                  arreglo=np.random.randint(1500,3500,size=1);
+                  print(f"Multas: {multas}")
+                  print("Certificado de emicion de contaminantes")
+                  print("Anotaciones: Sin anotaciones")
+                  print(f"Numero patente: {patente}")
+                  print(f"Nombre dueño: {nombre}")
+                  print(f"Valor a pagar: {arreglo}")
+
+        if opcion == 2:
+            listilla()
+
+        if opcion == 3:
+            certificados()
+          
+        if opcion == 4:
+            print("Usted ha salido del programa \nSoftwares realizado por: Felipe Embry")
+            print("Version software: 1.0")
+            break;
