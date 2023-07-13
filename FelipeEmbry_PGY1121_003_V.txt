@@ -1,0 +1,63 @@
+import numpy as np
+
+array = np.arange(1,101).reshape(10,10)
+array
+
+def asistentes():
+  lista = np.empty(10000)
+  lista
+  print(lista)
+
+def reemplazo(numero):
+   for c in range(len(array)):
+      for f in range(len(array[c])):
+        if(array[c,f] == 1):
+          array[c,f]= numero
+          return array
+
+def Menu():
+  print("Ventas Entradas Michael Jam")
+  print("1- Comprar entradas")
+  print("2- Mostrar ubcaciones disponibles")
+  print("3- Ver listads de asistentes")
+  print("4- Mostrar ganancias totales")
+  print("5- Salir")
+
+
+
+sw= 1 
+while sw == 1:
+    Menu()
+    opcion= int(input("Seleccione una opcion: "))
+    if opcion == 1:
+      print("Valores de entradas: ")
+      print("Platinum: $120.000 (Asientos del 1 al 20)")
+      print("Gold: $80.000 (Asientos del 21 al 50)")
+      print("Silver: $50.000 (Asientos del 51 al 100)")
+      cantentradas = int(input("Ingrese cuantas entradas desea comprar(Entre 1 a 3 entradas): "))
+      #Opcioines de cantidad de entradas
+      if cantentradas == 1:
+        print(array)
+        seleccion = int(input("Seleccione su ubicacion: "))
+        rut = int(input("Ingrese su rut sin guion, sin puntos ni digito verificador, Ejemplo: '12345678': "))
+        array.append(seleccion)
+        print(array)
+      if cantentradas == 2:
+        print(array)
+        seleccion2 = int(input("Seleccione su ubicacion: "))
+        rut2 = int(input("Ingrese su rut sin guion, sin puntos ni digito verificador, Ejemplo: '12345678': "))
+      if cantentradas == 3:
+        seleccion3 = int(input("Seleccione su ubicacion: "))
+        rut3 = int(input("Ingrese su rut sin guion, sin puntos ni digito verificador, Ejemplo: '12345678': "))
+
+      if opcion == 2:
+        print(array)
+      if opcion == 3:
+        asistentes()
+#      if opcion == 4:
+      if opcion == 5:
+        print("Usted esta abandonando el sistema")
+        print("Felipe Embry")
+        print("12-07-2023")
+        sw = 0
+        break
